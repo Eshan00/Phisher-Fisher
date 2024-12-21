@@ -9,7 +9,7 @@ document.getElementById("check-now").addEventListener("click", () => {
         document.getElementById("status").style.color = "green";
       }
 
-      // Get suspicious links from the page
+      // collect suspecious links, a scan basically.
       chrome.scripting.executeScript(
         {
           target: { tabId: tabs[0].id },
@@ -23,7 +23,7 @@ document.getElementById("check-now").addEventListener("click", () => {
     });
 });
 
-// Check if the domain is suspicious
+// checking of domain using suspecious/common keywords
 function isSuspiciousDomain(domain) {
   const suspiciousKeywords = ["free", "offer", "login", "secure"];
   return suspiciousKeywords.some((keyword) => domain.includes(keyword));
