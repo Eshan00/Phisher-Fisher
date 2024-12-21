@@ -21,6 +21,8 @@ How to Use: ---
     Click the extension icon in the browser toolbar to check the current page's status.
     Get notified if a suspicious domain is detected while browsing.
 
+    (NOTE: The project uses VirusTotal API for fetching domain reputation. Please make sure you get your unique key and paste it in 'background.js')
+
 License: ---
 This project is licensed under the MIT License.
 
